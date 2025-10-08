@@ -1,0 +1,57 @@
+<html>
+<title>Body Mass Index</title>
+<style>
+body
+{
+background-color:rgb(9, 172, 242);
+}
+.edge {
+width: 1650px;
+margin-left: auto;
+margin-right: auto;
+padding-top: 400px;
+padding-left: 350px;
+}
+.box {
+display:block;
+border: solid 7px peru;
+width: 800px;
+min-height: 400px;
+font-size: 50px;
+background-color: rgb(255, 121, 255);
+}
+.formelt{
+color:dark black(134, 25, 217);
+text-align: center;
+margin-top: 7px;
+margin-bottom: 7px;
+}
+</style>
+</head>
+<body>
+<div class= "edge">
+<div class= "box">
+<h1 align="center">Body Mass Index</h1>
+<h3 align="center">MONIKA V (25017555)</h3>
+<form method="POST">
+{% csrf_token %}
+<div class= "formelt">
+Weight: <input type= "text" name="Weight" value="{{Weight}}"></input>(in kg)<br/>
+</div>
+<div class= "formelt"> 
+Height: <input type="text" name="Height" value="{{Height}}"></input>(in m)<br/>
+</div>
+<div class= "formelt">
+<input type="submit" value="Calculate"><br/>
+</div>
+<div class= "formelt">
+BMI: <input type="text" name="BMI" value="{{BMI}}" align:"center"></input>kg/m<sup>3</sup><br/>
+</div>
+</form>
+</div>
+</div>
+</body>
+</html>
+
+
+
